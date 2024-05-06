@@ -15,11 +15,12 @@ install.packages("GGally")
 library(GGally)
 ggpairs(ir_test)
 y <- ir_test$Species; x <- ir_test$Sepal.Length
-glfit<glm(y~x, family ='binomial')
+glfit<-glm(y~x, family ='binomial')
 summary(glfit)
 newdata <- data.frame(x=ir_ctrl$Sepal.Length)
 predicted_val <- predict(glfit, newdata, type="response")
-prediction <- data.frame(ir_ctrl$Sepal.Length, ir_ctrlSSpecies,predicted_val)
+prediction <- data.frame(ir_ctrl$Sepal.Length, ir_ctrl$Species,predicted_val)
 prediction
 
 qplot(prediction[,1], round(prediction[,3]), col=prediction[,2], xlab='Sepal Length', ylab ='Prediction using Logistic Reg.')
+
