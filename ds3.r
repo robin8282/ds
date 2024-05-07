@@ -8,4 +8,4 @@ mistime<-read.csv(file.choose(), header = T)
 t.test(time~group, alternative = "two.sided", data = mistime, var.equal = TRUE)
 
 mistime<-read.csv(file.choose(), header = T)
-t.test(mistime$Time_Before., mistime$Time_After, alternative = "greater", paired = TRUE)
+t.test(mistime$Time_Before, mistime$Time_After, alternative = "greater", paired = TRUE)
