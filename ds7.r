@@ -1,5 +1,5 @@
 mistime2<-read.csv(file.choose(),header=T)
-var.test(mistime2$time_g1,mistime2$time_g2,alternative=“two.sided")
+var.test(mistime2$time_g1,mistime2$time_g2,alternative="two.sided")
 
 
 satlevel<-read.csv(file.choose(),header=T)
