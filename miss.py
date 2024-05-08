@@ -1,5 +1,14 @@
 import pandas as pd
 
+df = pd.read_csv('car_price.csv')
+old = pd.DataFrame(df)
+print(old)
+
+print("\n")
+df_csv_cleaned = df.dropna()
+print("Droped csv", df_csv_cleaned)
+
+
 # using means
 
 data = {'A': [1, 2, None, 4, 5],
