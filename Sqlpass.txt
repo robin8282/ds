@@ -1,0 +1,7 @@
+sqlplus /nolog
+
+CONNECT SYS AS SYSDBA
+
+SYS_password
+
+ALTER USER "account_name" IDENTIFIED BY "new Password" ACCOUNT UNLOCK;
